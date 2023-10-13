@@ -13,13 +13,17 @@
       <!-- 面包屑 -->
       <BreadCrumb></BreadCrumb>
     </div>
-    <div class="header-right"></div>
+    <div class="header-right">
+      <!-- 全屏组件 -->
+      <FullScreen></FullScreen>
+    </div>
   </div>
 </template>
 
 <script setup>
 import { useAppStore } from '../store/app'
 import BreadCrumb from './components/BreadCrumb.vue'
+import FullScreen from './components/FullScreen.vue'
 const store = useAppStore()
 </script>
 
@@ -29,14 +33,14 @@ const store = useAppStore()
   width: 100%;
   height: 60px;
   background-color: rgb(192, 160, 223);
-  justify-content: space-between;
+
   align-items: center;
   .header-left {
     margin: 20px;
     display: flex;
     align-items: center;
-    .el-breadcrumb{
-        margin-left: 10px;
+    .el-breadcrumb {
+      margin-left: 10px;
     }
   }
 }
