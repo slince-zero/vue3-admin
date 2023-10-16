@@ -5,6 +5,8 @@ import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue' // 引入所有图标
 import { createPinia } from 'pinia' // 引入pinia,用于状态管理
+import 'element-plus/theme-chalk/dark/css-vars.css' // 引入 element 黑暗样式
+
 
 const app = createApp(App)
 const pinia = createPinia()
