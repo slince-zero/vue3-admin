@@ -4,7 +4,7 @@
       <img src="../assets/mainLogo.svg" alt="" />
       <span v-if="!asideCollapse"> Vue3-admin </span>
     </div>
-    <el-menu router class="el-menu" :collapse="asideCollapse">
+    <el-menu router class="el-menu" :collapse="asideCollapse" :default-active="route.path">
       <TreeMenu :routerMenu="routerMenu"></TreeMenu>
     </el-menu>
   </div>
@@ -15,8 +15,13 @@ import TreeMenu from './TreeMenu.vue'
 import { routerMenu } from '../router/routerMenu'
 import { useAppStore } from '../store/app'
 import { storeToRefs } from 'pinia'
+import {useRoute} from 'vue-router'
+
+
 const store = useAppStore()
 const { asideCollapse } = storeToRefs(store)
+const route = useRoute()
+
 </script>
 
 <style scoped lang="scss">

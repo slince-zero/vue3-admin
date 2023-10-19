@@ -18,6 +18,6 @@ const toggleDark = useToggle(isDark)
 <style scoped>
 .theme-switch {
   cursor: pointer;
-  margin: 0 10px;
+  margin: 0 20px;
 }
 </style>

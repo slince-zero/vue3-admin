@@ -8,6 +8,8 @@
         <el-header class="header">
           <HeaderBar></HeaderBar>
         </el-header>
+        <!-- 切换页面 -->
+        <TabsChrome></TabsChrome>
         <el-main>
           <router-view></router-view>
         </el-main>
@@ -19,6 +21,7 @@
 <script setup>
 import AsideMenu from './AsideMenu.vue'
 import HeaderBar from './HeaderBar.vue'
+import TabsChrome from './TabsChrome.vue'
 import { storeToRefs } from 'pinia'
 import { useAppStore } from '../store/app'
 const store = useAppStore()
@@ -34,6 +37,9 @@ const { asideCollapse } = storeToRefs(store)
     transition: 0.3s;
   }
   .header {
+    padding: 0;
+  }
+  .el-main{
     padding: 0;
   }
 }
