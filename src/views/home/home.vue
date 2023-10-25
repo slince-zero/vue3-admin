@@ -15,7 +15,7 @@ import homeSon from './homeSon.vue'
 const msgg = '父亲给儿子传数据'
 
 const successDend = (e) => {
-  console.log('success', e)
+  console.log('success,', e)
 }
 
 

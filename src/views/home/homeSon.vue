@@ -10,7 +10,7 @@
 import { reactive } from 'vue'
 const emits = defineEmits(['successY'])
 
-const handleClick = (s) => {
+const handleClick = () => {
   emits('successY', '子组件向父组件传数据')
 }
 defineProps(['msgYY1'])

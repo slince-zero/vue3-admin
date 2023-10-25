@@ -24,7 +24,7 @@ const props = defineProps(['active', 'tab'])
 
 
 // 获取 emit
-const emit = defineEmits(['closeTab', 't'])
+const emit = defineEmits(['closeTab'])
 
 // 调用 emit
 const closeTab = () => {

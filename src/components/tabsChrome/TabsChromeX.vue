@@ -16,11 +16,12 @@ import Tab from './Tab.vue'
 const props = defineProps(['tabs', 'activePath'])
 
 const emit = defineEmits({
-  clickTab: () => {},
-  removeTab: () => {},
+  clickTabX: () => {},
+  removeTabX: () => {},
 })
 
 const clickTab = (t) => {
+  
   if (t.path == props.activePath) return
   emit('clickTab', t)
 }

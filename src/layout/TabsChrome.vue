@@ -32,6 +32,7 @@ import { ref } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useRouter, useRoute } from 'vue-router'
 import { useAppStore } from '../store/app'
+
 import TabsChromeX from '../components/tabsChrome/TabsChromeX.vue'
 
 const route = useRoute()
