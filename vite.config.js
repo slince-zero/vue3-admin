@@ -4,12 +4,12 @@ import vue from '@vitejs/plugin-vue'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  // server: {
-  //   proxy: {
-  //     '/api': {
-  //       target: 'localhost:5173',
-  //       changeOrigin: true,
-  //     },
-  //   },
-  // },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3080',
+        changeOrigin: true,
+      },
+    },
+  },
 })

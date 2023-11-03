@@ -3,8 +3,8 @@ import axios from 'axios'
 
 // 创建一个 Axios 实例
 const service = axios.create({
-  baseURL: '', 
-  timeout: 5000, 
+  baseURL: 'api',
+  timeout: 5000,
 })
 
 // 请求拦截器

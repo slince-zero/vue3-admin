@@ -1,9 +1,4 @@
 import { defineStore } from 'pinia'
-import storage from 'good-storage'
-import { cloneDeep } from 'lodash'
-
-// 设置localStorage中保存顶部导航栏的键值
-const TOP_NAV_KEY = '__TOP_NAV_KEY__'
 
 const initTabs = [
   {
@@ -30,7 +25,6 @@ export const useAppStore = defineStore('app', {
       let hasTab = this.topNav.find((item) => item.path === tab.path)
       if (hasTab) return
       this.topNav.push(tab)
-      // storage.set(TOP_NAV_KEY, cloneDeep(this.topNav))
     },
     // 删除一个顶部导航栏
     removeTopNav(tab) {

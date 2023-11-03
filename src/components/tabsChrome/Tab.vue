@@ -60,7 +60,8 @@ const closeTab = () => {
     .tab {
       &.active {
         background-color: #121212;
-
+        border: 1px solid #e4dede;
+        border-bottom: 0;
         .tabs-before-l,
         .tabs-before-r {
           fill: #121212;
