@@ -20,8 +20,7 @@
       <DarkMode></DarkMode>
       <!-- 头像下拉框 -->
       <el-dropdown trigger="click">
-        
-        <img class="avator" src="../assets/avator.png" alt="">
+        <img class="avator" src="../assets/avator.png" alt="" />
         <template #dropdown>
           <el-dropdown-menu>
             <el-dropdown-item>个人中心</el-dropdown-item>
@@ -34,40 +33,40 @@
 </template>
 
 <script setup>
-import { useAppStore } from '../store/app'
-import BreadCrumb from './components/BreadCrumb.vue'
-import FullScreen from './components/FullScreen.vue'
-import DarkMode from './components/darkmode.vue'
-const store = useAppStore()
+  import { useAppStore } from '../store/app'
+  import BreadCrumb from './components/BreadCrumb.vue'
+  import FullScreen from './components/FullScreen.vue'
+  import DarkMode from './components/darkmode.vue'
+  const store = useAppStore()
 </script>
 
 <style scoped lang="scss">
-.header {
-  display: flex;
-  width: 100%;
-  height: 60px;
-  justify-content: space-between;
-
-  background-color: rgb(192, 160, 223);
-
-  align-items: center;
-  .header-left {
-    margin: 0 20px;
+  .header {
     display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+
+    background-color: rgb(192, 160, 223);
+
     align-items: center;
-    .el-breadcrumb {
-      margin-left: 10px;
+    .header-left {
+      margin: 0 20px;
+      display: flex;
+      align-items: center;
+      .el-breadcrumb {
+        margin-left: 10px;
+      }
     }
-  }
-  .header-right {
-    display: flex;
-    margin: 0 20px;
-    align-items: center;
-    .avator{
+    .header-right {
+      display: flex;
+      margin: 0 20px;
+      align-items: center;
+      .avator {
         width: 40px;
         height: 40px;
         border-radius: 50%;
+      }
     }
   }
-}
 </style>
