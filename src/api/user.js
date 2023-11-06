@@ -33,3 +33,11 @@ export const getCaptcha = (params) => {
     method: 'get',
   })
 }
+
+// 获取当前用户信息
+export const getCurrentUserInfo = () => {
+  return service({
+    url: '/user/current',
+    method: 'get',
+  })
+}
