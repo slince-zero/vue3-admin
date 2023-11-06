@@ -41,11 +41,12 @@ export const useAppStore = defineStore('app', {
   // 删除所有顶部导航栏
   removeAllTopNav() {
     const arr = this.topNav
-    arr.filter((item) => {
-      if(item.path!='/home'){
-        this.removeTopNav(item)
-      }
-    })
+    // arr.filter((item) => {
+    //   if(item.path!='/home'){
+    //     this.removeTopNav(item)
+    //   }
+    // })
+    this.topNav = []
   },
  },
 })

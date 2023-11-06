@@ -5,9 +5,9 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
-        path:'/login',
-        name:'login',
-        component: ()=> import('../views/login/login.vue')
+      path: '/login',
+      name: 'login',
+      component: () => import('../views/login/login.vue'),
     },
     {
       path: '/',
@@ -20,6 +20,12 @@ const router = createRouter({
       children: [...routerMenu],
     },
   ],
+})
+
+router.beforeEach((to, from, next) => {
+  // 设置浏览器标题
+  document.title = to.meta.title + ' - ' + 'vue3-admin'
+  next()
 })
 
 export default router

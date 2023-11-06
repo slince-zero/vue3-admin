@@ -119,10 +119,16 @@
 
   // 登录逻辑
   const loginForm = async (formEl) => {
-    const { message } = await login(formList)
-    formEl.resetFields()
-    ElMessage.success(message)
-    await router.push('/home')
+    const res = await login(formList)
+    if (res.code == 200) {
+      // 跳转到首页
+      formEl.resetFields()
+      router.push('/home')
+      ElMessage.success(res.message)
+    } else {
+      getCaptchaImg()
+      ElMessage.error(res.message)
+    }
   }
   // 注册逻辑
   const registerForm = async (formEl) => {
