@@ -117,7 +117,6 @@
  // 登录逻辑
  const loginForm = async (formEl) => {
   const res = await login(formList)
-  console.log(res, 'ces')
   if (res.code === 200) {
    // 跳转到首页
    formEl.resetFields()

@@ -15,6 +15,8 @@
     </el-main>
    </el-container>
   </el-container>
+  <!-- 由于是异步组件,所以需要用Suspense，因此单独抽离了一个组件包裹在 Suspense 中 -->
+  <Suspense> <MessageBox /> </Suspense>
  </div>
 </template>
 
@@ -24,22 +26,9 @@
  import TabsChrome from './TabsChrome.vue'
  import { storeToRefs } from 'pinia'
  import { useAppStore } from '../store/app'
- import { getCurrentUserInfo } from '../api/user'
- import { ElNotification } from 'element-plus'
+ import MessageBox from './components/MessageBox.vue'
  const store = useAppStore()
  const { asideCollapse } = storeToRefs(store)
-
- // 获取当前用户信息
- const currentUserInfo = getCurrentUserInfo()
- // 显示成功信息
- ElNotification({
-  title: '欢迎',
-  message: `欢迎回来，${currentUserInfo.username}`,
-  type: 'success',
-  offset: 50,
-  duration: 2000,
-  position: 'bottom-right',
- })
 </script>
 
 <style scoped>
